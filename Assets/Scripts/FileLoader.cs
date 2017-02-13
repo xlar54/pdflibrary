@@ -43,11 +43,13 @@ public class FileLoader : MonoBehaviour {
     public void Show()
     {
         transform.position = new Vector3(-0.011f, 0.84f, -4.37f);
+        GetComponent<OculusTouch>().pointerEnabled = true;
     }
 
     public void Hide()
     {
         transform.position = new Vector3(-0.011f, 100.84f, -4.37f);
+        GetComponent<OculusTouch>().pointerEnabled = false;
     }
 
     public void UpdateFileList()
@@ -132,6 +134,13 @@ public class FileLoader : MonoBehaviour {
     public void ChangeDrive()
     {
         this.drive = DriveLetter.GetComponentInChildren<Text>().text.Substring(0,2);
+        path = "\\";
+        UpdateFileList();
+    }
+
+    public void ChangeDrive(Button b)
+    {
+        this.drive = b.GetComponentInChildren<Text>().text.Substring(0, 2);
         path = "\\";
         UpdateFileList();
     }

@@ -1,0 +1,142 @@
+fileFormatVersion: 2
+guid: b37d35461ec4b64419ae2f26844b9562
+timeCreated: 1486871729
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: bone_button_x
+    100002: bone_button_y
+    100004: bone_stick
+    100006: bone_trigger_finger
+    100008: bone_trigger_palm
+    100010: mesh_button_o
+    100012: mesh_button_x
+    100014: mesh_button_y
+    100016: mesh_stick
+    100018: mesh_touch
+    100020: mesh_trigger_finger
+    100022: mesh_trigger_plam
+    100024: //RootNode
+    400000: bone_button_x
+    400002: bone_button_y
+    400004: bone_stick
+    400006: bone_trigger_finger
+    400008: bone_trigger_palm
+    400010: mesh_button_o
+    400012: mesh_button_x
+    400014: mesh_button_y
+    400016: mesh_stick
+    400018: mesh_touch
+    400020: mesh_trigger_finger
+    400022: mesh_trigger_plam
+    400024: //RootNode
+    2300000: bone_button_x
+    2300002: bone_button_y
+    2300004: bone_stick
+    2300006: bone_trigger_finger
+    2300008: bone_trigger_palm
+    2300010: mesh_button_o
+    2300012: mesh_button_x
+    2300014: mesh_button_y
+    2300016: mesh_stick
+    2300018: mesh_touch
+    2300020: mesh_trigger_finger
+    2300022: mesh_trigger_plam
+    2300024: //RootNode
+    3300000: bone_button_x
+    3300002: bone_button_y
+    3300004: bone_stick
+    3300006: bone_trigger_finger
+    3300008: bone_trigger_palm
+    3300010: mesh_button_o
+    3300012: mesh_button_x
+    3300014: mesh_button_y
+    3300016: mesh_stick
+    3300018: mesh_touch
+    3300020: mesh_trigger_finger
+    3300022: mesh_trigger_plam
+    3300024: //RootNode
+    4300000: bone_root
+    4300002: bone_stick
+    4300004: mesh_stick
+    4300006: bone_button_y
+    4300008: mesh_button_y
+    4300010: bone_button_x
+    4300012: mesh_button_x
+    4300014: mesh_button_o
+    4300016: mesh_touch
+    4300018: bone_trigger_palm
+    4300020: mesh_trigger_plam
+    4300022: bone_trigger_finger
+    4300024: mesh_trigger_finger
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
