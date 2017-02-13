@@ -2,4 +2,4 @@
 
 PDF Reader for the Oculus Rift
 
-Gamecontroller required (Not Oculus Touch)
+There is a new branch which has Oculus Touch support
