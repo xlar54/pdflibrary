@@ -21,7 +21,6 @@ limitations under the License.
 
 using UnityEngine;
 using System.Collections;
-using VR = UnityEngine.VR;
 
 /// <summary>
 /// Sample that allows you to play with various VR settings. 
@@ -148,7 +147,11 @@ public class OVRSceneSampleController : MonoBehaviour
             Screen.fullScreen = !Screen.fullScreen;
 
         if (Input.GetKeyDown(KeyCode.M))
-			VR.VRSettings.showDeviceView = !VR.VRSettings.showDeviceView;
+#if UNITY_2017_2_OR_NEWER
+			UnityEngine.XR.XRSettings.showDeviceView = !UnityEngine.XR.XRSettings.showDeviceView;
+#else
+			UnityEngine.VR.VRSettings.showDeviceView = !UnityEngine.VR.VRSettings.showDeviceView;
+#endif
 
 #if !UNITY_ANDROID || UNITY_EDITOR
         // Escape Application

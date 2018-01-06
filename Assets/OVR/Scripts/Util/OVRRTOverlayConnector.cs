@@ -55,11 +55,21 @@ public class OVRRTOverlayConnector : MonoBehaviour
 	/// </summary>
 	public GameObject ovrOverlayObj;
 	private RenderTexture srcRT;
-	private Camera ownerCamera;
-
+	private Camera ownerCamera;
+
 	/// <summary>
-	/// Triple buffer the textures applying to overlay
+	///  Reconstruct render texture chain if ownerCamera's targetTexture was changed
 	/// </summary>
+	public void RefreshRenderTextureChain()
+	{
+		srcRT = ownerCamera.targetTexture;
+		Debug.Assert(srcRT);
+		ConstructRenderTextureChain();
+	}
+
+/// <summary>
+/// Triple buffer the textures applying to overlay
+/// </summary>
 	void ConstructRenderTextureChain()
 	{
 		for (int i = 0; i < overlayRTChainSize; i++)
@@ -105,12 +115,16 @@ public class OVRRTOverlayConnector : MonoBehaviour
 	/// </summary>
 	void OnPostRender()
 	{
-		if (srcRT)
+		if (srcRT && ovrOverlayObj != null)
 		{
 			Graphics.Blit(srcRT, overlayRTChain[overlayRTIndex]);
 			OVROverlay ovrOverlay = ovrOverlayObj.GetComponent<OVROverlay>();
-			Debug.Assert(ovrOverlay);
+			Debug.Assert(ovrOverlay && ovrOverlay.isActiveAndEnabled);
+#if UNITY_2017_2_OR_NEWER
+			ovrOverlay.OverrideOverlayTextureInfo(overlayRTChain[overlayRTIndex], overlayTexturePtrs[overlayRTIndex], UnityEngine.XR.XRNode.LeftEye);
+#else
 			ovrOverlay.OverrideOverlayTextureInfo(overlayRTChain[overlayRTIndex], overlayTexturePtrs[overlayRTIndex], UnityEngine.VR.VRNode.LeftEye);
+#endif
 			overlayRTIndex++;
 			overlayRTIndex = overlayRTIndex % overlayRTChainSize;
 		}
